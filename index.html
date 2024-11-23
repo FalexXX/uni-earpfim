@@ -1,0 +1,209 @@
+<?php
+session_start();
+include 'Login/conexion.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon"
+        href="img/DALL·E 2024-09-03 17.26.08 - A simplified and unique logo inspired by the concept of a prestigious engineering university in Peru. The design should include elements like a styliz.webp"
+        type="image/x-icon">
+</head>
+
+<body>
+    <nav class="menu-lateral">
+        <ul>
+            <li>
+                <a href="#" id="prueba">
+                    <div class="title_logo">
+                        <img src="img/Uni-logo-blanco-negro.png" alt="logo uni" style="height: 40px; margin-left: 5px;">
+                        <h4>
+                            <span class="texto_modi">UNI EARPFIM</span><br>
+                            <span style="font-weight: 300; font-size: 10px;">DOCENTE</span>
+                        </h4>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="" class="menu-pri list__button--click">
+                    <i class="fa-sharp fa-solid fa-suitcase"></i>
+                    General
+                    <i class="fa-solid fa-chevron-down list_arrow"></i>
+                </a>
+                <ul class="submenu list_show">
+                    <li class="list_inside">
+                        <a href="">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            Aula Virtual FIM
+                        </a>
+                    </li>
+                    <li class="list_inside">
+                        <a href="direcciones/Horario.html">
+                            <i class="fa-solid fa-pencil"></i>
+                            Mi horario de Clases
+                        </a>
+                    </li>
+                    <li class="list_inside">
+                        <a href="direcciones/informacion.html">
+                            <i class="fa-solid fa-image-portrait"></i>
+                            Información Docente
+                        </a>
+                    </li>
+                    <li class="list_inside">
+                        <a href="">
+                            <i class="fa-solid fa-building-columns"></i>
+                            Mi cursos Asignados
+                        </a>
+                    </li>
+                    <li class="list_inside">
+                        <a href="">
+                            <i class="fa-solid fa-file"></i>
+                            Tutoria Alumnos
+                        </a>
+                    </li>
+                    <li class="list_inside">
+                        <a href="direcciones/Asistencia.html">
+                            <i class="fa-solid fa-file"></i>
+                            Asistencia
+                        </a>
+                    </li>
+                    <li class="list_inside">
+                        <a href="">
+                            <i class="fa-solid fa-link"></i>
+                            Cargar Notas ORCE
+                        </a>
+                    </li>
+                    <li class="list_inside">
+                        <a href="">
+                            <i class="fa-solid fa-book"></i>
+                            Biblioteca Virtual
+                        </a>
+                    </li>
+                    <li class="list_inside">
+                        <a href="">
+                            <i class="fa-solid fa-cubes-stacked"></i>
+                            Mi Disponibilidad
+                        </a>
+                    </li>
+                    <li class="list_inside">
+                        <a href="">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                            Reclamo del reclamo
+                        </a>
+                    </li>
+                    <li class="list_inside">
+                        <a href="">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                            Correcion de notas
+                        </a>
+                    </li>
+                    <li class="list_inside">
+                        <a href="">
+                            <i class="fa-solid fa-gear"></i>
+                            Ayuda en Aula
+                        </a>
+                    </li>
+                    <li class="list_inside">
+                        <a href="">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            Aula Virtual Titulación
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="" class="menu-pri list__button--click">
+                    <div>
+                        <i class="fa-sharp fa-solid fa-suitcase"></i>
+                        Administrador
+                    </div>
+                    <i class="fa-solid fa-chevron-down" class="list_arrow"></i>
+                </a>
+            </li>
+            <li>
+                <a href="" class="menu-pri list__button--click">
+                    <div>
+                        <i class="fa-sharp fa-solid fa-suitcase"></i>
+                        Acreditacion FIM
+                    </div>
+                    <i class="fa-solid fa-chevron-down" class="list_arrow"></i>
+                </a>
+            </li>
+            <li>
+                <a href="" class="menu-pri list__button--click">
+                    <div>
+                        <i class="fa-sharp fa-solid fa-suitcase"></i>
+                        Virtual
+                    </div>
+                    <i class="fa-solid fa-chevron-down" class="list_arrow"></i>
+                </a>
+            </li>
+            <li>
+                <a href="" class="menu-pri list__button--click">
+                    <div>
+                        <i class="fa-sharp fa-solid fa-suitcase"></i>
+                        Documentos académicos
+                    </div>
+                    <i class="fa-solid fa-chevron-down" class="list_arrow"></i>
+                </a>
+            </li>
+            <li>
+                <a href="" class="menu-pri list__button--click">
+                    <div>
+                        <i class="fa-sharp fa-solid fa-suitcase"></i>
+                        Supervision
+                    </div>
+                    <i class="fa-solid fa-chevron-down" class="list_arrow"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- PANTALLA DE CARGA PRINCIPAL -->
+    <section class="contenido-principal">
+        <div class="menu-superior">
+            <div class="pt-1">
+                <i class="fa-solid fa-bars" id="sidebar"></i>
+                <h2 id="nombre-usuario"></h2>
+            </div>
+            <div class="pt-2">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+        
+        <div class="charge-container">
+            <div>
+                <div class="txt-inicio">
+                    <div class="txt-1">
+                        <h4>BIENVENIDO AL EARFIM</h4>
+                    </div>
+                    <div class="txt-2">
+                        <h4>ZONA USUARIO</h4>
+                    </div>
+                </div>
+                <img src="img/d87744_96d5f56a3fe945e2a0c8afe20868d896~mv2.gif" alt="">
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const nombre = localStorage.getItem("nombre");
+        if(nombre){
+            const contnombre = document.getElementById('nombre-usuario');
+            contnombre.textContent = `${nombre}`;
+        }else{
+            console.log("No hay usuario logeado");
+        }
+    </script>
+
+
+
+</body>
+
+</html>

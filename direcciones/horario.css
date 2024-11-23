@@ -1,0 +1,159 @@
+
+.horario-clases{
+    margin:20px 30px 60px 50px;
+}
+.encabezado{
+   display: flex;
+   justify-content: space-between; 
+   margin-bottom: 20px;
+}
+.pt1{
+    display: flex;
+    flex-direction: column;
+}
+.pt1 h2{
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.pt1 span{
+    color: #2a2828be;
+}
+
+.pt1 button{
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: rgb(201, 25, 25);
+    height: 30px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    width: 130px;
+    border-radius:5px;
+    border-color:rgba(255, 255, 255, 0);
+}
+.pt1 button i{
+    font-size: 16px;
+    margin-right: 5px;
+}
+.pt2{
+    margin-top: 25px;
+}
+.pt2 .año{
+    margin-left: 100px;
+    width: 70px;
+    height: 20px;
+    text-align: center;
+}
+.pt2 h4{
+    margin-left: 90px;
+    color: #224FB1;
+    font-size: 15px;
+    font-weight: bold;
+}
+.pt2 h3{
+    font-size: 20px;
+    color:#2a2828be;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-right: 20px;
+}
+div table thead tr th{
+    text-align: center;
+    font-size: 12px;
+}
+
+.hora{
+    text-align: center;
+    width: 150px;
+    font-size: 12px;
+}
+.dia{
+    width: 450px;
+}
+div table tbody .custom-cell{
+    background-color: #b3e5fc; 
+    text-align:center;
+    border: solid 2px #638b9dc0;
+    padding: 50% auto;
+    font-size: 10px;
+}
+
+
+
+  @media screen and (max-width:768px) {
+    .horario-clases{
+        margin: 30px 30px 10px 30px;
+    }
+
+    .encabezado{
+          margin-bottom:50px ;
+    }
+      
+    .encabezado h3{
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .encabezado .pt2 .año{
+        font-size: 12px;
+        margin-left: 100px;
+        margin-bottom: 10px;
+        width: 65px;
+        height: 20px;
+    }
+    .encabezado .pt1 button{
+        margin-top: 15px;
+        font-size: 14px;
+        height: 30px;
+        width: 150px;
+    }
+
+
+    .encabezado .pt2 .año option{
+        width: 10px;
+    }
+    
+
+    #calendar{
+        z-index: -1;
+    }
+
+  }
+
+  @media screen and (max-width:500px) {
+    .horario-clases{
+        margin: 30px 30px 10px 30px;
+    }
+    .encabezado .pt1 h2{
+        font-size: 28px;
+    }
+
+    .encabezado h3{
+        font-size: 14px;
+        margin-left: 20px;
+    }
+
+    .encabezado .pt2 .año{
+        font-size: 12px;
+        margin-left: 100px;
+        margin-bottom: 10px;
+        width: 65px;
+        height: 20px;
+    }
+    .encabezado .pt1 button{
+        margin-top:20px;
+        font-size: 14px;
+        height: 40px;
+        width: 150px;
+    }
+
+    #calendar{
+        z-index: -1;
+    }
+
+  }

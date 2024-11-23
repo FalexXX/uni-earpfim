@@ -1,0 +1,102 @@
+.btn {
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.container-asistencia {
+    margin: 10px 50px 20px 50px;
+}
+
+.information {
+    -webkit-box-shadow: 2px 2px 16px -3px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: 2px 2px 16px -3px rgba(0, 0, 0, 0.54);
+    box-shadow: 2px 2px 16px -3px rgba(0, 0, 0, 0.54);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.text-information {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.b {
+    background-color: #224FB1;
+    border-color: #224FB1;
+}
+
+.text-information button {
+    margin-bottom: 15px;
+}
+
+.text-information .pt1 {
+    margin-bottom: 30px;
+}
+
+.accordion {
+    --bs-accordion-border-radius: 0;
+    --bs-accordion-inner-border-radius: 0;
+}
+
+.accordion-item {
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.23);
+    box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.23);
+}
+
+.accordion-item .accordion-header .accordion-button {
+    background-color: #7777772d;
+    height: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.table{
+    font-size: 14px;
+    text-align: center;
+    margin:0;
+}
+
+
+ @media screen and (max-width: 500px) {
+
+    .container-asistencia {
+        margin: 5px 10px; 
+    }
+
+    .information {
+        padding: 5px;
+    }
+
+    .text-information {
+        font-size: 12px;
+    }
+
+    .text-information button {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+  
+    .accordion-item .accordion-header .accordion-button {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .table {
+        font-size: 10px;
+    }
+
+    .table thead th, .table tbody td {
+        padding: 5px; 
+    }
+    
+    .accordion {
+        margin-bottom: 10px; 
+    }
+}

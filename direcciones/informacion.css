@@ -1,0 +1,131 @@
+.perfil-container {
+    flex-wrap: wrap;
+    max-width: 800px;
+    padding: 30px 70px 30px 70px;
+  }
+
+  input[type="text"], input[type="tel"], input[type="email"], input[type="date"] {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+}
+
+.color{
+  border-color: #224FB1;
+  background-color: #224FB1;
+}
+
+label{
+  font-size: 16px !important;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
+    border-bottom: 1px solid #007bff; 
+    box-shadow: none;
+}
+  .superior{
+    display: flex;
+    align-items: center;    
+  }
+
+  .imagen-perfil img {
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .texto-perfil{
+    margin-left: 20px;
+  }
+  
+  .info-perfil h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .info-perfil p {
+    margin:0;
+    color: #666;
+  }
+  
+  .opciones {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .opciones a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  .opciones .historial{
+    margin-left: 10px;
+  }
+  
+  .botones {
+    gap: 45px;
+    display: flex;
+  }
+
+  
+  .botones button {
+    border: 1px solid #ddd;
+    padding: 5px 12px;
+    margin: 0;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .botones i {
+    font-size: 18px;
+  }
+  
+  .acciones {
+    margin-top: 10px;
+    gap: 10px;
+    display: flex;
+  }
+  
+  .btn-refresh {
+    border: 1px solid #00bcd4;
+    background-color: #ffffff;
+    color: #00bcd4;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-pdf {
+    border: 1px solid red;
+    background-color: #ffffff;
+    color: red;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+  
+  /* PAGINACIÓN */
+  .datos-personales{
+    margin: 10px 70px;
+  }
+  .page-item{
+    border:none;
+  }
+  .contenido {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.contenido.active {
+    display: block;
+}
