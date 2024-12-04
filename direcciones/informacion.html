@@ -191,21 +191,27 @@
 
                         <div class="botones">
                             <button class="btn-upload">
-                                <i class="fas fa-upload"></i>
+                                <label for="upload">
+                                    <i class="fas fa-upload"></i>
+                                </label>
                             </button>
-                            <button class="btn-historial">
-                                <i class="fas fa-file-alt"></i>
+                            <input type="file" name="upload" id="upload" style="display: none;">
+                            <button class="btn-historial" >
+                                <a href="../documents/Historial.txt" download="Historial">
+                                    <i class="fas fa-file-alt">
+                                    </i>
+                                </a>
                             </button>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
             <div class="inferior">
                 <div class="acciones">
-                    <button class="btn-refresh">
+                    <button class="btn-refresh" onclick="location.reload()">
                         <i class="fas fa-sync-alt"></i>
                     </button>
-                    <button class="btn-pdf">Generar PDF</button>
+                    <a class="btn-pdf" href="../documents/CAPTURAS DE AVANCE UNI_PROYECTO.pdf" download="Informacion">Generar PDF</a>
                 </div>
             </div>
         </div>
