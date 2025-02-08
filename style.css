@@ -47,18 +47,18 @@ a {
 }
 
 .menu-lateral ul li a .title_logo h4 {
-    font-size: 16px;
+    font-size: 18px;
     margin-left: 10px;
     color: black;
     font-weight: 400;
 }
 
 .menu-pri {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
     display: flex;
     justify-content: space-between;
-    padding: 5px 25px 5px 25px;
+    padding: 10px 25px 5px 25px;
 }
 
 .menu-pri div i {
