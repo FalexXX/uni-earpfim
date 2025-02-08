@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "codCurso": "FIS101",
+        "nomCurso": "Física General",
+        "secCurso": "C/D",
+        "codDocente": 87546374,
+        "docente": "María Gómez",
+        "teopra": "P",
+        "hora": "08-10",
+        "dia": "LU",
+        "semestre": 20242
+    },
+    {
+        "id": 2,
+        "codCurso": "MAT202",
+        "nomCurso": "Álgebra Lineal",
+        "secCurso": "A/B",
+        "codDocente": 98567412,
+        "docente": "Juan Pérez",
+        "teopra": "T",
+        "hora": "14-16",
+        "dia": "JU",
+        "semestre": 20242
+    }
+]

@@ -8,7 +8,7 @@ formulario.addEventListener("submit", function (event) {
   console.log(email);
   console.log(contra);
   try {
-    fetch('usuarios.json') 
+    fetch('../json/usuarios.json') 
       .then(response => response.json()) 
       .then(data => {
         let usuarioEncontrado = data.find(user => user.email === email && user.password === contra);
