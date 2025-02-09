@@ -1,16 +1,69 @@
 [
-  {
-    "id": 1,
-    "email": "fabri.lveintimilla@gmail.com",
-    "password": "12345",
-    "nombre": "Fabrizio Alexander Lengua Veintimilla",
-    "codigo": 854996
-  },
-  {
-    "id": 2,
-    "email": "vane1234@gmail.com",
-    "password": "6789",
-    "nombre": "Vanessa Fernanda Diaz Cardenas",
-    "codigo": 898887
-  }
-]
+    {
+      "id": 1,
+      "email": "fabri.lveintimilla@gmail.com",
+      "password": "12345",
+      "nombre": "Fabrizio Alexander Lengua Veintimilla",
+      "codigo": 854996,
+      "dni": "08165233",
+      "sexo": "Masculino",
+      "fecha_nacimiento": "16/02/1975",
+      "celular": ["951629294", "990626562"],
+      "telefono_fijo": ["67596381", "52563387", "5996331"],
+      "fecha_matrimonio": "01/04/2005",
+      "emails_alternativos": ["maximo@jun", "maxobreon"],
+      "pais_nacimiento": "Perú",
+      "departamento_nacimiento": "Lima",
+      "provincia_nacimiento": "01 Lima",
+      "distrito_nacimiento": "01 San Martín de Porres",
+      "domicilio": {
+        "pais": "Perú",
+        "departamento": "Lima",
+        "provincia": "01 Lima",
+        "distrito": "San Martín de Porres",
+        "tipo_via": "Mz",
+        "direccion_extranjera": "No"
+      },
+      "datos_laborales": {
+        "condicion": "Contratado",
+        "categoria": "Planilla",
+        "dedicacion": "B1",
+        "horas_lectivas": 16,
+        "regimen_pensionario": "AFP"
+      }
+    },
+    {
+      "id": 2,
+      "email": "vane1234@gmail.com",
+      "password": "6789",
+      "nombre": "Vanessa Fernanda Diaz Cardenas",
+      "codigo": 898887,
+      "dni": "09546281",
+      "sexo": "Femenino",
+      "fecha_nacimiento": "22/08/1982",
+      "celular": ["987654321", "923456789"],
+      "telefono_fijo": ["45362178", "89745612", "74589632"],
+      "fecha_matrimonio": "14/09/2010",
+      "emails_alternativos": ["vane.d@gmail.com", "vdiaz@hotmail.com"],
+      "pais_nacimiento": "Perú",
+      "departamento_nacimiento": "Arequipa",
+      "provincia_nacimiento": "02 Arequipa",
+      "distrito_nacimiento": "02 Cayma",
+      "domicilio": {
+        "pais": "Perú",
+        "departamento": "Arequipa",
+        "provincia": "02 Arequipa",
+        "distrito": "Cayma",
+        "tipo_via": "Av",
+        "direccion_extranjera": "No"
+      },
+      "datos_laborales": {
+        "condicion": "Nombrada",
+        "categoria": "Funcionario",
+        "dedicacion": "A2",
+        "horas_lectivas": 20,
+        "regimen_pensionario": "ONP"
+      }
+    }
+  ]
+  
