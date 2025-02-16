@@ -178,7 +178,7 @@
                 <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
         </div>
-    <!-- CONTENIDO PRINCIPAL -->
+        <!-- CONTENIDO PRINCIPAL -->
         <div class="perfil-container">
             <div class="superior">
 
@@ -200,14 +200,14 @@
                                 </label>
                             </button>
                             <input type="file" name="upload" id="upload" style="display: none;">
-                            <button class="btn-historial" >
+                            <button class="btn-historial">
                                 <a href="../documents/Historial.txt" download="Historial">
                                     <i class="fas fa-file-alt">
                                     </i>
                                 </a>
                             </button>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
             <div class="inferior">
@@ -215,7 +215,8 @@
                     <button class="btn-refresh" onclick="location.reload()">
                         <i class="fas fa-sync-alt"></i>
                     </button>
-                    <a class="btn-pdf" href="../documents/CAPTURAS DE AVANCE UNI_PROYECTO.pdf" download="Informacion">Generar PDF</a>
+                    <a class="btn-pdf" href="../documents/CAPTURAS DE AVANCE UNI_PROYECTO.pdf"
+                        download="Informacion">Generar PDF</a>
                 </div>
             </div>
         </div>
@@ -245,13 +246,13 @@
                                 </div>
                                 <div class="col">
                                     <label for="" class="col-form-label-sm ">Fecha Nacimiento</label>
-                                    <input type="date" class="form-select form-select-md mb-3 nacimiento-usuario" >
+                                    <input type="date" class="form-select form-select-md mb-3 nacimiento-usuario">
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="" class="col-form-label-sm ">Telefono Fijo<i
                                         class="fa-solid fa-pencil ms-1 text-primary"></i></label>
-                                <input type="text" class="form-control telefono-usuario" >
+                                <input type="text" class="form-control telefono-usuario">
                             </div>
                             <div class="mb-3">
                                 <label for="" class="col-form-label-sm ">RUC</label>
@@ -264,7 +265,7 @@
                             <div class="row mb-3">
                                 <div class="col">
                                     <label for="" class="col-form-label-sm ">Estado Civil</label>
-                                    <select class="form-select form-select-md mb-3" id="">   
+                                    <select class="form-select form-select-md mb-3" id="">
                                         <option value="" selected>Seleccionar...</option>
                                         <option value="">Casado</option>
                                         <option value="">Soltero</option>
@@ -273,7 +274,7 @@
                                 </div>
                                 <div class="col">
                                     <label for="" class="col-form-label-sm ">Fecha Matrimonio</label>
-                                    <input type="date" class="form-select form-select-md mb-3 matrimonio-usuario" >
+                                    <input type="date" class="form-select form-select-md mb-3 matrimonio-usuario">
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -346,7 +347,7 @@
                                 <div class="mb-3">
                                     <label for="" class="form-label">Provincia</label>
                                     <select name="" id="" class="form-select form-select-md mb-3">
-                                        <option  class="provincia-usuario" selected></option>
+                                        <option class="provincia-usuario" selected></option>
                                         <option value="">02 Cuzco</option>
                                         <option value="">03 Arequipa</option>
                                         <option value="">04 Tacna</option>
@@ -400,136 +401,137 @@
                                             <div class="row">
                                                 <div class="mb-3 col">
                                                     <label class="col-form-label">País</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="" selected>Perú</option>
-                                                        <option value="">Bolivia</option>
-                                                        <option value="">Ecuador</option>
-                                                        <option value="">Brazil</option>
-                                                        <option value="">Chile</option>
+                                                    <select name="" id="pais-modal" class="form-control">
+                                                        <option value="Perú" selected>Perú</option>
                                                     </select>
                                                 </div>
                                                 <div class="mb-3 col">
                                                     <label class="col-form-label">Departamento</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="" selected>02 Ancash</option>
-                                                        <option value="">01 Tarma</option>
-                                                        <option value="">03 Arequipa</option>
-                                                        <option value="">04 Tarapoto</option>
-                                                        <option value="">05 Lurin</option>
+                                                    <select name="" id="departamentos-modal" class="form-control">
+                                                        <option value="Ancash" selected>02 Ancash</option>
+                                                        <option value="Tarma">01 Tarma</option>
+                                                        <option value="Arequipa">03 Arequipa</option>
+                                                        <option value="Tarapoto">04 Tarapoto</option>
+                                                        <option value="Lurin">05 Lurin</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="mb-3 col">
                                                     <label class="col-form-label">Provincia</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="" selected>01 Lurin</option>
-                                                        <option value="">02 Aija</option>
-                                                        <option value="">03 Loreto</option>
-                                                        <option value="">04 Ancash</option>
-                                                        <option value="">05 Apurimac</option>
+                                                    <select name="" id="provincia-modal" class="form-control">
+                                                        <option value="Lurin" selected>01 Lurin</option>
+                                                        <option value="Aija">02 Aija</option>
+                                                        <option value="Loreto">03 Loreto</option>
+                                                        <option value="Ancash">04 Ancash</option>
+                                                        <option value="Apurimac">05 Apurimac</option>
                                                     </select>
                                                 </div>
                                                 <div class="mb-3 col">
                                                     <label class="col-form-label">Distrito</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="" selected>02 Coris</option>
-                                                        <option value="">01 San juan de Lurigancho</option>
-                                                        <option value="">03 Los Olivos</option>
-                                                        <option value="">04 Barranco</option>
-                                                        <option value="">05 Lima centro</option>
+                                                    <select name="" id="distrito-modal" class="form-control">
+                                                        <option value="Coris" selected>02 Coris</option>
+                                                        <option value="San Juan de Lurigancho">01 San Juan de Lurigancho
+                                                        </option>
+                                                        <option value="Los Olivos">03 Los Olivos</option>
+                                                        <option value="Barranco">04 Barranco</option>
+                                                        <option value="Lima Centro">05 Lima Centro</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="row me-5">
                                                 <div class="col">
                                                     <label class="col-form-label">Tipo de Vía</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="">.....</option>
-                                                        <option value="">....</option>
-                                                        <option value="">.....</option>
-                                                        <option value="">......</option>
-                                                        <option value="">.....</option>
+                                                    <select name="" id="tipo-via-modal" class="form-control">
+                                                        <option value="Avenida">Avenida</option>
+                                                        <option value="Calle">Calle</option>
+                                                        <option value="Jirón">Jirón</option>
+                                                        <option value="Pasaje">Pasaje</option>
+                                                        <option value="Carretera">Carretera</option>
                                                     </select>
                                                 </div>
                                                 <div class="col">
                                                     <label class="col-form-label">Nombre de la Vía</label>
-                                                    <input type="text" name="" id="" class="form-control">
+                                                    <input type="text" name="" id="via-modal" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="row me-5">
                                                 <div class="col">
                                                     <label class="col-form-label">Tipo</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="">.....</option>
-                                                        <option value="">....</option>
-                                                        <option value="">.....</option>
-                                                        <option value="">......</option>
-                                                        <option value="">.....</option>
+                                                    <select name="" id="tipo-modal" class="form-control">
+                                                        <option value="Casa">Casa</option>
+                                                        <option value="Departamento">Departamento</option>
+                                                        <option value="Oficina">Oficina</option>
+                                                        <option value="Local Comercial">Local Comercial</option>
+                                                        <option value="Terreno">Terreno</option>
                                                     </select>
                                                 </div>
                                                 <div class="col">
                                                     <label class="col-form-label">Número de Inmueble</label>
-                                                    <input type="text" name="" id="" class="form-control">
+                                                    <input type="text" name="" id="inmueble-modal" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="row me-5">
                                                 <div class="col">
                                                     <label class="col-form-label">Tipo de Zona</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="">.....</option>
-                                                        <option value="">....</option>
-                                                        <option value="">.....</option>
-                                                        <option value="">......</option>
-                                                        <option value="">.....</option>
+                                                    <select name="" id="tipo-zona-modal" class="form-control">
+                                                        <option value="Residencial">Residencial</option>
+                                                        <option value="Comercial">Comercial</option>
+                                                        <option value="Industrial">Industrial</option>
+                                                        <option value="Rural">Rural</option>
+                                                        <option value="Mixta">Mixta</option>
                                                     </select>
                                                 </div>
                                                 <div class="col">
                                                     <label class="col-form-label">Nombre de Zona</label>
-                                                    <input type="text" name="" id="" class="form-control">
+                                                    <input type="text" name="" id="zona-modal" class="form-control">
                                                 </div>
                                             </div>
                                         </form>
-
                                     </div>
+
+
                                     <div class="modal-footer">
-                                        <button type="button" class="btn text-primary-emphasis fs-6">GUARDAR</button>
+                                        <button type="button" class="btn text-primary-emphasis fs-6"
+                                            onclick="agregarRegistro()">GUARDAR</button>
                                         <button type="button" class="btn text-secondary-emphasis fs-6"
                                             data-bs-dismiss="modal">CANCELAR</button>
                                     </div>
                                 </div>
                             </div>
                     </div>
-                    <table class="table table-bordered text-center">
-                        <thead>
-                            <tr class="text-center fw-bolder" style="font-size: 14px; text-transform: uppercase;">
-                                <th scope="col">Orden</th>
-                                <th scope="col">País</th>
-                                <th scope="col">Dirección extranjera</th>
-                                <th scope="col">Departamento</th>
-                                <th scope="col">Provincia</th>
-                                <th scope="col">Distrito</th>
-                                <th scope="col">Tipo de Via</th>
-                                <th scope="col">Nombre de la Via</th>
-                                <th scope="col">Tipo</th>
-                                <th scope="col">Número de inmueble</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="fw-light" style="font-size: 14px;">
-                                <td>1</td>
-                                <td class="domicilio-pais"></td>
-                                <td> </td>
-                                <td class="domicilio-departamento"></td>
-                                <td class="domicilio-provincia"></td>
-                                <td class="domicilio-distrito"></td>
-                                <td></td>
-                                <td></td>
-                                <td class="domicilio-tipo"></td>
-                                <td class="domicilio-inmueble"></td>
-                            </tr>
+                    <table class="table table-bordered text-center new-domicilio">
+                        <div>
+                            <thead>
+                                <tr class="text-center fw-bolder" style="font-size: 14px; text-transform: uppercase;">
+                                    <th scope="col">Orden</th>
+                                    <th scope="col">País</th>
+                                    <th scope="col">Dirección extranjera</th>
+                                    <th scope="col">Departamento</th>
+                                    <th scope="col">Provincia</th>
+                                    <th scope="col">Distrito</th>
+                                    <th scope="col">Tipo de Via</th>
+                                    <th scope="col">Nombre de la Via</th>
+                                    <th scope="col">Tipo</th>
+                                    <th scope="col">Número de inmueble</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="fw-light" style="font-size: 14px;">
+                                    <td>1</td>
+                                    <td class="domicilio-pais"></td>
+                                    <td> </td>
+                                    <td class="domicilio-departamento"></td>
+                                    <td class="domicilio-provincia"></td>
+                                    <td class="domicilio-distrito"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="domicilio-tipo"></td>
+                                    <td class="domicilio-inmueble"></td>
+                                </tr>
+                            </tbody>
+                        </div>
 
-                        </tbody>
                     </table>
             </div>
             <h1 class="fs-4 mt-5 mb-3 text-primary-emphasis">1.- PERSONAS A COMUNICAR EN CASO DE EMERGENCIA:</h1>
@@ -671,7 +673,7 @@
                         <td>
                             <label for="" class="form-label">Condición (C/N)</label>
                             <select class="form-select form-select-md mb-3" id="">
-                                <option  class="dl-condicion" selected ></option>
+                                <option class="dl-condicion" selected></option>
                                 <option value="">.....</option>
                                 <option value="">.....</option>
                                 <option value="">Otro...</option>
@@ -697,7 +699,7 @@
                         </td>
                         <td>
                             <label for="" class="form-label">Horas</label>
-                            <input type="number" class="form-control" >
+                            <input type="number" class="form-control">
                         </td>
                     </tr>
                     <tr>
@@ -818,12 +820,13 @@
                                     </div>
                                     <div class="col mt-3" style="display: flex;">
                                         <p>Documento sustentatorio</p>
-                                        <div style="display: flex; align-content: center; border: 1px solid #777777;  margin-left: 10px; margin-bottom: 10px; font-size: 18px;"> 
-                                        <label for="submitfile">
-                                            <i  style="margin: 10px 12px;" class="fa-solid fa-cloud-arrow-up">
-                                            </i>
-                                        </label>
-                                        <input type="file" id="submitfile" style="display: none;">
+                                        <div
+                                            style="display: flex; align-content: center; border: 1px solid #777777;  margin-left: 10px; margin-bottom: 10px; font-size: 18px;">
+                                            <label for="submitfile">
+                                                <i style="margin: 10px 12px;" class="fa-solid fa-cloud-arrow-up">
+                                                </i>
+                                            </label>
+                                            <input type="file" id="submitfile" style="display: none;">
                                         </div>
                                     </div>
                                 </div>

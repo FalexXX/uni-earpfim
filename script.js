@@ -163,6 +163,64 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+//MODAL
+document.addEventListener("DOMContentLoaded", function() {
+  let modal = document.getElementById("exampleModal");
+
+  modal.addEventListener("shown.bs.modal", function () {
+      modal.setAttribute("aria-hidden", "false"); // Quita el atributo cuando se abre
+  });
+
+  modal.addEventListener("hidden.bs.modal", function () {
+      modal.setAttribute("aria-hidden", "true"); // Lo vuelve a agregar al cerrar
+  });
+});
+
+//FUNCION PARA AGREGAR UN NUEVO REGISTRO
+function agregarRegistro() {
+  let pais = document.getElementById("pais-modal").value;
+  let departamento = document.getElementById("departamentos-modal").value;
+  let provincia = document.getElementById("provincia-modal").value;
+  let distrito = document.getElementById("distrito-modal").value;
+  let tipoVia = document.getElementById("tipo-via-modal").value;
+  let nombreVia = document.getElementById("via-modal").value;
+  let TipoDi = document.getElementById("tipo-modal").value;
+  let inmuebletipo =document.getElementById("inmueble-modal").value;
+  let tipoZona = document.getElementById("tipo-zona-modal").value;
+  let nombreZona = document.getElementById("zona-modal").value;
+
+  
+  let NewDomicilio = document.querySelector(".new-domicilio tbody");
+
+  console.log(inmuebletipo)
+  if (!NewDomicilio) {
+    console.error("No se encontró el tbody con la clase 'new-domicilio'. Verifica la estructura del HTML.");
+    return;
+  }
+
+  let orden = NewDomicilio.rows.length + 1;
+
+  // Crear una nueva fila con template literals
+  let nuevaFila = `
+      <tr class="fw-light" style="font-size: 14px;">
+          <td>${orden}</td>
+          <td>${pais}</td>
+          <td></td>          
+          <td>${departamento}</td>
+          <td>${provincia}</td>
+          <td>${distrito}</td>
+          <td>${tipoVia}</td>
+          <td>${nombreVia}</td>
+          <td>${tipoZona}</td>
+          <td>${inmuebletipo}</td>
+      </tr>
+  `;
+
+  // Agregar la fila sin sobrescribir las existentes
+  NewDomicilio.innerHTML += nuevaFila;
+
+  
+}
 
 
 //PAGINACIÓN
