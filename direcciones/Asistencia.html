@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="Asistencia.css">
     <link rel="shortcut icon"
-        href="../img/DALL·E 2024-09-03 17.26.08 - A simplified and unique logo inspired by the concept of a prestigious engineering university in Peru. The design should include elements like a styliz.webp"
+        href="../img/DALL·E 2025-09-03 17.26.08 - A simplified and unique logo inspired by the concept of a prestigious engineering university in Peru. The design should include elements like a styliz.webp"
         type="image/x-icon">
 </head>
 
@@ -180,15 +180,15 @@
                 <div class="information">
                     <div style="display: flex; flex-direction: column;">
                         <span>Semestre:</span>
-                        <select class="" style="width: 130px; height: 25px; border-radius: 5px;">
-                            <option value="">2022</option>
-                            <option value="">2023</option>
-                            <option value="">2024</option>
+                        <select id="semestre-select" style="width: 130px; height: 25px; border-radius: 5px;">
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2023">2023</option>
                         </select>
                     </div>
                     <div class="text-information">
                             <p>Presiones este botón solo cuando tenga que registrar su entrada y salida de clases</p>
-                            <p>Hora: 12:24:46 <button class="btn btn-success">MARCAR MI ASISTENCIA:ENTRADA/SALIDA</button> Ayuda ©</p>
+                            <p>Hora: <span id="hora-actual"> </span><button class="btn btn-success" onclick="agregarAsistencia()">MARCAR MI ASISTENCIA:ENTRADA/SALIDA</button> Ayuda ©</p>
                             <button class="btn btn-warning" style="color: white;">TOMAR ASISTENCIA ALUMNOS</button>
                             <button class="btn btn-primary pt1 b">SOLICITAR RECUPERACIÓN/JUSTIFICACIÓN</button>
                             <div class="d-flex justify-content-center align-items-center flex-wrapd-flex justify-content-center align-items-center flex-wrap">
@@ -205,12 +205,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                JULIO 2023
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"  id="mes-julio">
+                                JULIO 2024
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                    <table class="table table-bordered">
+                                    <table class="table table-bordered new-asistencia" id="tabla-asistencia">
                                         <thead>
                                           <tr>
                                             <th scope="col">Día</th>
@@ -220,35 +220,8 @@
                                             <th scope="col">Est</th>
                                           </tr>
                                         </thead>
-                                        <tbody>
-                                          <tr>
-                                            <td>Viernes 12</td>
-                                            <td>MC510-E(TEO)</td>
-                                            <td>11-13</td>
-                                            <td>11:02 - 13:00</td>
-                                            <td><button class="btn btn-success">P</button></td>
-                                          </tr>
-                                          <tr>
-                                            <td>Viernes 12</td>
-                                            <td>BIC01-F(PRA)</td>
-                                            <td>09-11</td>
-                                            <td>09:00 - 11:24</td>
-                                            <td><button class="btn btn-success">P</button></td>
-                                          </tr>
-                                          <tr>
-                                            <td>Viernes 12</td>
-                                            <td>BIC01-F(TEO)</td>
-                                            <td>08-09</td>
-                                            <td>09:00 - 11:24</td>
-                                            <td><button class="btn btn-success">P</button></td>
-                                          </tr>
-                                          <tr>
-                                            <td>Jueves 11</td>
-                                            <td>MB536-I(PRA)</td>
-                                            <td>19-22</td>
-                                            <td>19:00 - 22:00</td>
-                                            <td><button class="btn btn-success">P</button></td>
-                                          </tr>
+                                        <tbody id="tabla-cuerpo">
+                                          
                                         </tbody>
                                       </table>
                         </div>
@@ -256,8 +229,8 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                JUNIO 2023
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="mes-junio">
+                                JUNIO 2024
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -307,8 +280,8 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                MAYO 2023
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="mes-mayo">
+                                MAYO 2024
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -363,7 +336,65 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectSemestre = document.getElementById('semestre-select');
+            selectSemestre.addEventListener('change', function() {
+                cargarAsistencias();
+                actualizarMeses();
+            });
 
+            function cargarAsistencias() {
+                const semestre = selectSemestre.value;
+                fetch('../json/asistencia.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const tablaCuerpo = document.getElementById('tabla-cuerpo');
+                        tablaCuerpo.innerHTML = ''; // Limpiar la tabla
+                        data[semestre].forEach(asistencia => {
+                            const fila = document.createElement('tr');
+                            fila.innerHTML = `
+                                <td>${asistencia.dia}</td>
+                                <td>${asistencia.curso}</td>
+                                <td>${asistencia.horario}</td>
+                                <td>${asistencia.marcacion}</td>
+                                <td><button class="btn btn-success">${asistencia.estado}</button></td>
+                            `;
+                            tablaCuerpo.appendChild(fila);
+                        });
+                    });
+            }
+
+            function actualizarMeses() {
+                const semestre = selectSemestre.value;
+                document.getElementById('mes-julio').textContent = `JULIO ${semestre}`;
+                document.getElementById('mes-junio').textContent = `JUNIO ${semestre}`;
+                document.getElementById('mes-mayo').textContent = `MAYO ${semestre}`;
+            }
+
+            // Cargar asistencias del semestre seleccionado al cargar la página
+            cargarAsistencias();
+            actualizarMeses();
+
+            // Mostrar la hora actual
+            const horaActual = new Date().toLocaleTimeString();
+            document.getElementById('hora-actual').textContent = horaActual;
+        });
+
+        function agregarAsistencia() {
+            const tablaCuerpo = document.getElementById('tabla-cuerpo');
+            const nuevaFila = document.createElement('tr');
+            const horaActual = new Date().toLocaleTimeString();
+            nuevaFila.innerHTML = `
+                <td>Hoy</td>
+                <td>Nuevo Curso</td>
+                <td>00-00</td>
+                <td>${horaActual}</td>
+                <td><button class="btn btn-success">P</button></td>
+            `;
+            tablaCuerpo.appendChild(nuevaFila);
+        }
+    </script>
 </body>
 
 </html>

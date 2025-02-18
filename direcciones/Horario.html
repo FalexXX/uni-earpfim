@@ -189,9 +189,9 @@
                     </button>
                 </div>
                 <div class="pt2">
-                    <select class="año" id="">
-                        <option value="2022">2022</option>
+                    <select class="año" id="año-select">
                         <option value="2023">2023</option>
+                        <option value="2025">2025</option>
                         <option value="2024">2024</option>
                     </select>
                     <h4>DEFINITIVO</h4>
@@ -213,162 +213,8 @@
                             <th scope="col" class="dia">DOMINGO</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="row" class="hora">07-08</td>
-                            <td> </td>
-                            <td> </td>
-                            <td></td>
-                            <td> </td>
-                            <td > </td>
-                            <td></td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">08-09</td>
-                            <td> </td>
-                            <td class="custom-cell align-middle" rowspan="2"><i class="fa-solid fa-user"></i>(35) MC510-C/D / VIRTUAL (T) </td>
-                            <td class="custom-cell align-middle" rowspan="3"> <i class="fa-solid fa-user"></i>(12) MC510-E / VIRTUAL (P)</td>
-                            <td> </td>
-                            <td class="custom-cell align-middle"> <i class="fa-solid fa-user"></i>(12) MC510-E / VIRTUAL (P)</td>
-                            <td></td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">09-10</td>
-                            <td> </td>
-                            <td></td>
-                            <td class="custom-cell align-middle" rowspan="2"><i class="fa-solid fa-user"></i>(12) MC510-E / VIRTUAL (P) </td>
-                            <td ></td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">10-11</td>
-                            <td></td>
-                            <td class="custom-cell align-middle" rowspan="2"><i class="fa-solid fa-user"></i>(12) MC510-E / VIRTUAL (T)    </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">11-12</td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">12-13</td>
-                            <td> </td>
-                            <td> </td>
-                            <td></td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">13-14</td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">14-15</td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">15-16</td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">16-17</td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">17-18</td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">18-19</td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">19-20</td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">20-21</td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">21-22</td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="hora">22-23</td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td></td>
-                        </tr>
+                    <tbody id="tabla-horario">
+                      
                     </tbody>
                 </table>
             </div>
@@ -378,6 +224,42 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const añoSelect = document.getElementById('año-select');
+            añoSelect.addEventListener('change', cargarHorario);
+
+            function cargarHorario() {
+                const año = añoSelect.value;
+                fetch('../json/horario.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const tablaHorario = document.getElementById('tabla-horario');
+                        tablaHorario.innerHTML = ''; // Limpiar la tabla
+                        data[año].forEach(horario => {
+
+                        const fila = document.createElement('tr');
+                        fila.innerHTML = `
+                            <td class="hora">${horario.hora}</td>
+                            <td class="dia">${horario.lunes}</td>
+                            <td class="dia">${horario.martes}</td>
+                            <td class="dia">${horario.miercoles}</td>
+                            <td class="dia">${horario.jueves}</td>
+                            <td class="dia">${horario.viernes}</td>
+                            <td class="dia">${horario.sabado}</td>
+                            <td class="dia">${horario.domingo}</td>
+                            `;
+                            
+                         
+                            tablaHorario.appendChild(fila);
+                        });
+                    });
+            }
+
+            // Cargar horario del año seleccionado al cargar la página
+            cargarHorario();
+        });
+    </script>
 </body>
 
 </html>

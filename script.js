@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-//FUNCION PARA AGREGAR UN NUEVO REGISTRO
+//FUNCION PARA AGREGAR UN NUEVO DOMICILIO (INFORMACION.html)
 function agregarRegistro() {
   let pais = document.getElementById("pais-modal").value;
   let departamento = document.getElementById("departamentos-modal").value;
@@ -221,6 +221,7 @@ function agregarRegistro() {
 
   
 }
+
 
 
 //PAGINACIÓN
